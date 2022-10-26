@@ -9,7 +9,7 @@ pipeline{
                 sh 'docker build -t Hanaa00/DockerDemo:demo-1.4 .'
             }
         }
-    }
+    
     stage('login to Docker Hub'){
         steps{
             sh 'echo $DOCKERHUB-CREDENTIALS-PSW | docker login -u $DOCKERHUB_CREDENTIALS_USR --password-stdin'
@@ -19,7 +19,7 @@ pipeline{
         steps{
             sh 'docker push Hanaa00/DockerDemo:demo-1.4'
         }
-    }
+    }}
     post{
         always{
             sh 'docker logout'
