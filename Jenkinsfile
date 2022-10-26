@@ -1,5 +1,6 @@
 pipeline{
-    agent any{
+    agent any
+    environment{
         DOCKERHUB_CREDENTIALS=credentials('Hanaa00')
     }
     stages{
