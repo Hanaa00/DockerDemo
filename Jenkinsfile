@@ -6,7 +6,7 @@ pipeline{
     stages{
         stage('Docker build'){
             steps{
-                sh 'docker build -t Hanaa00/DockerDemo:demo-1.4 .'
+                sh 'docker build -t Hanaa00/docker-demo:demo-1.4 .'
             }
         }
     
@@ -17,7 +17,7 @@ pipeline{
     }
     stage('push image'){
         steps{
-            sh 'docker push Hanaa00/DockerDemo:demo-1.4'
+            sh 'docker push Hanaa00/docker-demo:demo-1.4'
         }
     }}
     post{
